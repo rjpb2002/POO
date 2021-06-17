@@ -8,7 +8,6 @@ class For:
         numeros = (1,2,3,4,5)
         docente = {"Nombre":"Ronny","Edad":19,"Fac":"Faci"}
         listanotas = [(30,40),[20,40],(50,40)]
-        listaalumnos = [{"Nombre":"Ronny","Final":70},{"Nombre":"Teffy","Final":70},{"Nombre":"Javier","Final":60}]
         #! Range([inicio=0], limite,[inc/dec=1]). Genera un rango de valores desde un valor inicial a un valor final.
         #* Se ejecuta desde el inicio
         # for i in range(5): #rango[0,1,2,3,4]
@@ -44,12 +43,51 @@ class For:
         # for dato in ["h","o","l","a","que","tal"]:
         #     print(dato)   
 
-        print("\nDiccionario de notas")
-        for alumnos in listaalumnos:
-            for clave,valor in alumnos.items():
-                print(clave,":",valor,end = " ")
+        # print("\nDiccionario de notas")
+        # for clave,valor in docente.items():
+        #     print(clave,":",valor,end="  ")
+        
+        
+        # listaNotas = [(30,40),[20,40,20],(50,40,20,10)]
+        # acum = 0
+        # long = 0
+    
+        # for notas in listaNotas: 
+        #     acum2 = 0
 
+        #     for nota in notas:  
+        #         print(nota)
+        #         long= long + 1
+        #         acum = acum + nota
+        #         acum2 += nota
+        #     promParcial = acum2/len(notas)
+        #     print("Notas parciales : {}  -  Promedio Parcial: {} ".format(acum2,promParcial))
 
+        # prom = acum / long
+        # print("El total de notas es de: {}   -   Número de notas: {}   -   El promedio es: {} ".format(acum,long,prom))
+        # listaalumnos = [{"Nombre":"Ronny","Final":70},{"Nombre":"Teffy","Final":60},{"Nombre":"Javier","Final":90}]
+        # acumAlum = 0
+        # contAlum = 0 
+        # for alumnos in listaalumnos:
+        #     print("\n",alumnos)
+            
+        #     for clave,valor in alumnos.items():
+        #         print(clave,":",valor,end = "\n ")
+            
+        #         if clave == "Final":acumAlum = acumAlum + valor
+        #     contAlum += 1    
+        # print("\nPromemdio General",acumAlum/contAlum)
+        
+        #!METODO 1
+        frase = "Hola que haces"
+        # vocales = []
+        # for car in frase:
+        #     if car in ("a","e","i","o","u"):
+        #         vocales.append(car)
+        # print(vocales)
+
+        #!METODO 2
+        print( [car for car in frase if car in ("a","e","i","o","u")])
 
 bucle1 = For() 
 bucle1.usoFor()
