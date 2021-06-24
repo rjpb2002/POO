@@ -1,4 +1,4 @@
-#7.-Leer tres números enteros diferentes entre sí y determinar el número mayor de los tres.
+#8.-Leer tres números enteros diferentes entre sí y determinar el número mayor de los tres.
 
 class numeros:
     def mayor(self):
