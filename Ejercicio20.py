@@ -1,4 +1,4 @@
-#18.-Se tiene información sobre las calificaciones de 6 exámenes de un grupo de 30 alumnos. Los datos sobre estos exámenes se proporcionan de la siguiente manera:
+#20.-Se tiene información sobre las calificaciones de 6 exámenes de un grupo de 30 alumnos. Los datos sobre estos exámenes se proporcionan de la siguiente manera:
 # Cal1,1 Cal1,2 ............ Cal1,6
 # Cal2,1 Cal2,2 ............ Cal2,6
 # .......................
