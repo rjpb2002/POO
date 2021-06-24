@@ -1,4 +1,4 @@
-#13.-Determinar si un número entero proporcionado por el usuario es primo. 
+#15.-Determinar si un número entero proporcionado por el usuario es primo. 
 # Un número primo es un entero que no tiene más divisores que él mismo y la unidad.
 
 class numero:
