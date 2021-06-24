@@ -16,33 +16,33 @@ class Arreglo:
     def Dosdimensiones(self):
         Cal=[]
         promE=[]
-        for f in range(3):
+        for f in range(30):
             Cal.append([])
-            for c in range(3):
+            for c in range(6):
                 Cal[f].append(None)
                 Cal[f][c] = float(input("Ingresar calificacion que obtuvo el alumno {} en el examen {}: ".format(f+1,c+1)))
         
         print("")
-        for f in range(3):
-            for c in range(3):
+        for f in range(30):
+            for c in range(6):
                 print(Cal[f][c],end=" ")
             print() 
         
         print("")
         #!Cálculo del promedio de calificaciones de cada uno de los exámenes
-        for c in range(3):
+        for c in range(6):
             sum=0
             
-            for f in range(3):
+            for f in range(30):
                 sum=sum + Cal[f][c]
             promE.append(sum/len(Cal))
             print("El promedio del examen {} : {:.2f}".format(c+1,sum/len(Cal)))
 
         print("")
         #!cálculo del promedio de cada alumno
-        for f in range(3):
+        for f in range(30):
             sum=0
-            for c in range(3):
+            for c in range(6):
                 sum=sum + Cal[f][c]
             print("El promedio del alumno {} : {:.2f}".format(f+1,sum/len(Cal)))
 
@@ -50,7 +50,7 @@ class Arreglo:
         #!cálculo del tipo de examen que tuvo el mayor promedio de calificación.
         exam=0
         pmayor= promE[1]
-        for c in range(3):    
+        for c in range(6):    
             if pmayor < promE[c]:
                 pmayor = promE[c]
                 exam=c
