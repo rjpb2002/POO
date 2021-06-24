@@ -1,4 +1,4 @@
-#17.-Aplicar las fases  para  la resolución de un problema para leer un vector de 20 números enteros 
+#19.-Aplicar las fases  para  la resolución de un problema para leer un vector de 20 números enteros 
 # y a continuación escribir en un vector A todos los números negativos 
 # y en un vector B todos los positivos o iguales a cero. Imprimir dichos vectores.
 class vector:
