@@ -1,21 +1,24 @@
-#16.-Sea un vector “Calificaciones” de 100 componentes:
-class vector:
-    def Calificaciones(self):
-          calificaciones=[]
-          j= 0
-          c=1
-          for i in range(0,100,1):
-            cal=float(input("Escriba la calificación: "))
-            calificaciones.append(cal)
-            j=j+1
-          print("")
-          for i in range (0,j,1):
-            print("La calificación {} es {:.2f}".format(c,calificaciones[i]))
-            c=c+1
+# 14.-Aplicar los pasos de la metodología para la solución de un problema para leer un número entero N 
+# y calcular el resultado de la siguiente serie:
+# 1 – 1/2+ 1/3 – 1/4 +.... +/- 1/N. 
 
-dato = vector()
-dato.Calificaciones() 
+class numero:
+    def entero(self):
+        s = 0
+        l = 1
+        num = int(input("Ingrese un número entero: "))
+        b = "T"
+        while l < num:
+            if b == "T":    
+                s = s + (1/l)
+                b = "F"
+            else:
+                s = s - (1/l)
+                b = "T"
+            l = l + 1
 
+        print("El resultado de las series es de: {}".format(s))
 
-
+dato = numero()
+dato.entero()
 

@@ -1,31 +1,17 @@
-#17.-Aplicar las fases  para  la resolución de un problema para leer un vector de 20 números enteros 
-# y a continuación escribir en un vector A todos los números negativos 
-# y en un vector B todos los positivos o iguales a cero. Imprimir dichos vectores.
-class vector:
-    def calificaciones(self):
-        A=[]
-        B=[]
-        j=0
-        k=0
-        num=[]
+#15.-Calcular el factorial de N números enteros leídos de teclado.
+# El problema consistirá en realizar una estructura de N iteraciones aplicando el factorial de un número.
 
-        for i in range (0,20,1):
-            n=int(input("Ingrese un número entero:"))
-            num.append(n)
-            if num[i] < 0:
-                A.insert(j,num[i])                
-                j = j + 1
+class factorial:
+    def numero(self):
+        num = int(input("Ingrese la cantidad de veces: "))
+        a=1
+        for a in range (num):
+            n = int(input("Ingrese un número entero: "))
+            fac = 1
+            for b in range(1, n+1):
+                fac *= b
+            
+            print("El factorial del número {} es: {}".format(n,fac))
 
-            else:
-                B.insert(k,num[i])
-                k = k + 1
-
-        print("")   
-        for i in range(0,j,1):
-              print("El vector A tiene el valor de {}".format(A[i]))
-        print("")   
-        for i in range (0,k,1):
-              print("El vector B tiene el valor de {}".format(B[i]))
-         
-dato = vector()
-dato.calificaciones()
+dato = factorial()
+dato.numero()

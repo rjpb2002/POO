@@ -1,17 +1,21 @@
-#15.-Calcular el factorial de N números enteros leídos de teclado.
-# El problema consistirá en realizar una estructura de N iteraciones aplicando el factorial de un número.
+#13.-Determinar si un número entero proporcionado por el usuario es primo. 
+# Un número primo es un entero que no tiene más divisores que él mismo y la unidad.
 
-class factorial:
-    def numero(self):
-        num = int(input("Ingrese la cantidad de veces: "))
-        a=1
-        for a in range (num):
-            n = int(input("Ingrese un número entero: "))
-            fac = 1
-            for b in range(1, n+1):
-                fac *= b
-            
-            print("El factorial del número {} es: {}".format(n,fac))
+class numero:
+    def primo(self):
+        prim = "V"
+        div = 2
+        n = int(input("Ingrese un número entero: "))
+        while div < n and prim == "V":
+            r = n % div
+            if r == 0:
+                prim = "F"
+            div = div + 1
+        if prim == "V":
+            print("El número {} es primo".format(n))
+        else:
+            print("El número {} no es primo".format(n))
 
-dato = factorial()
-dato.numero()
+dato = numero() 
+dato.primo()    
+    

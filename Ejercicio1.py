@@ -1,12 +1,11 @@
-#1.-En una tienda se ofrece un descuento del 15% sobre el total de la compra
-# y un cliente desea saber cuánto deberá pagar finalmente por su compra.
+#1.-En ejemplos anteriores, 
+# diseñamos un pseudocódigo para encontrar la superficie de un círculo para un radio cualquiera.
+class Circulo:
+    def superficie(self):
+        pi= 3.1416
+        r=float(input("Ingresa el radio del circulo: "))
+        A=pi*r**2
+        print("La superficie del circulo es: {:.2f}".format(A))
 
-class descuento:
-    def compra(self):
-        TotalCompra = float(input("Ingrese el precio total de la compra: $"))
-        Des = TotalCompra * 0.15
-        TotalPagar = TotalCompra - Des
-        print("El precio total a pagar será de: ${:.2f}".format(TotalPagar))
-
-dato = descuento()
-dato.compra()
+dato= Circulo()
+dato.superficie()

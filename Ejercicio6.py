@@ -1,26 +1,15 @@
- #6.Determinar la cantidad de dinero que recibirá un trabajador por concepto de las horas extras 
- # trabajadas en una empresa, sabiendo que cuando las horas de trabajo exceden de 40, 
- # el resto  se consideran horas extras y que éstas se pagan al doble de una hora normal cuando no exceden de 8;  
- # si las horas extras exceden de 8 se pagan las primeras 8 al  doble de lo que se paga por una hora normal 
- # y el resto al triple.
+#5.-Dado el sueldo de un empleado, encontrar el nuevo sueldo si obtiene un aumento del 10% 
+# si su sueldo es inferior a $600, en caso contrario no tendrá aumento.
 
-class trabajador:
-    def dinero(self):
-        horas = int(input("Ingrese las horas trabajadas: "))
-        pago = float(input("Ingrese el pago por hora: $"))
-        if horas > 40:
-            extras = horas - 40
-            if extras > 8:
-                excedido = extras - 8
-                pagoExtras = pago * 2 * 8 + pago * 3 * excedido
-            else:
-                pagoExtras = pago * 2 * extras
-            pagoTrabajador = pago * 40 + pagoExtras
+class empleado:
+    def sueldo(self):
+        se = float(input("Ingrese su sueldo básico: $"))
+        if se < 600:
+            nuevo = se + se * 0.1
+            print("El nuevo sueldo será de: ${:.2f}".format(nuevo))
         else:
-            pagoTrabajador = pago + horas
+            nuevo = se               
+            print("El sueldo no tendrá aumento será de: ${:.2f}  ".format(nuevo))
 
-        print("El pago total de las horas trabajadas será de: ${:.2f}".format(pagoTrabajador))      
-
-dato = trabajador()
-dato.dinero()
-
+dato = empleado()
+dato.sueldo()

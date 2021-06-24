@@ -1,15 +1,13 @@
-#5.-Dado el sueldo de un empleado, encontrar el nuevo sueldo si obtiene un aumento del 10% 
-# si su sueldo es inferior a $600, en caso contrario no tendrá aumento.
+#4.-Dado como dato la calificación de un alumno en un examen, escriba “aprobado” 
+# si su calificación es mayor o igual que 7 y “Reprobado” en caso contrario.
 
-class empleado:
-    def sueldo(self):
-        se = float(input("Ingrese su sueldo básico: $"))
-        if se < 600:
-            nuevo = se + se * 0.1
-            print("El nuevo sueldo será de: ${:.2f}".format(nuevo))
+class alumno:
+    def calificación(self):
+        c = float(input("Ingrese la calificación del examen: "))
+        if c >= 7:
+            print("Aprobado")
         else:
-            nuevo = se               
-            print("El sueldo no tendrá aumento será de: ${:.2f}  ".format(nuevo))
+            print("Reprobado")
 
-dato = empleado()
-dato.sueldo()
+dato = alumno()
+dato.calificación()

@@ -1,24 +1,17 @@
-# 14.-Aplicar los pasos de la metodología para la solución de un problema para leer un número entero N 
-# y calcular el resultado de la siguiente serie:
-# 1 – 1/2+ 1/3 – 1/4 +.... +/- 1/N. 
+#12.-Diseñe un pseudocódigo para calcular la suma y producto de N números enteros, 
+# utilizando un bucle controlado por centinela.
 
-class numero:
-    def entero(self):
-        s = 0
-        l = 1
-        num = int(input("Ingrese un número entero: "))
-        b = "T"
-        while l < num:
-            if b == "T":    
-                s = s + (1/l)
-                b = "F"
-            else:
-                s = s - (1/l)
-                b = "T"
-            l = l + 1
+class calcular:
+    def sp(self):
+        sum = 0
+        produc = 1
+        nu = int(input("Ingrese un número diferente a -1 : "))
+        while nu != -1:
+            sum = sum + nu
+            produc = produc * nu
+            nu = int(input("Ingrese un número( Si desea salir ingrese -1): "))
+        print("\nLa suma total del calculo es: {}".format(sum))
+        print("El producto total del calculo es: {}".format(produc))
 
-        print("El resultado de las series es de: {}".format(s))
-
-dato = numero()
-dato.entero()
-
+dato = calcular()
+dato.sp()

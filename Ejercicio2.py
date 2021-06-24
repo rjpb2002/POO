@@ -1,17 +1,12 @@
-#2.-Un vendedor recibe un sueldo base más un 10% extra por comisión de sus ventas. 
-# El vendedor desea saber cuánto dinero obtendrá por concepto de comisiones por las tres ventas que realiza en el mes
-# y el total que recibirá en el mes tomando en cuenta su sueldo base y sus comisiones.
+#1.-En una tienda se ofrece un descuento del 15% sobre el total de la compra
+# y un cliente desea saber cuánto deberá pagar finalmente por su compra.
 
-class vendedor:
-    def sueldo(self):
-        SueldoBase = float(input("Ingrese su sueldo básico: $"))
-        Venta1 = float(input("Ingrese el valor de la primera venta: $"))
-        Venta2 = float(input("Ingrese el valor de la segunda venta: $"))
-        Venta3 = float(input("Ingrese el valor de la tercera venta: $"))
-        VT = Venta1 + Venta2 + Venta3
-        CV = VT * 0.1
-        Total = SueldoBase + CV
-        print("El sueldo total a recibir con las comisiones será de: ${:.2f}".format(Total))
+class descuento:
+    def compra(self):
+        TotalCompra = float(input("Ingrese el precio total de la compra: $"))
+        Des = TotalCompra * 0.15
+        TotalPagar = TotalCompra - Des
+        print("El precio total a pagar será de: ${:.2f}".format(TotalPagar))
 
-dato = vendedor()
-dato.sueldo()
+dato = descuento()
+dato.compra()
