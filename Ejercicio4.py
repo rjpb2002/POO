@@ -1,4 +1,4 @@
-#3.-Construir un algoritmo tal, que dado como dato la calificación de un alumno en un examen, 
+#4.-Construir un algoritmo tal, que dado como dato la calificación de un alumno en un examen, 
 # escriba “Aprobado” en caso que esa calificación fuese mayor o igual que 7.
 
 class alumno:
