@@ -1,4 +1,4 @@
-#9.-Calcular la suma de los cuadrados de los primeros 100 enteros y escribir el resultado.
+#11.-Calcular la suma de los cuadrados de los primeros 100 enteros y escribir el resultado.
 
 class suma:
     def cuadrados(self):
