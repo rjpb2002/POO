@@ -1,4 +1,4 @@
-#16.-Sea un vector “Calificaciones” de 100 componentes:
+#18.-Sea un vector “Calificaciones” de 100 componentes:
 class vector:
     def Calificaciones(self):
           calificaciones=[]
