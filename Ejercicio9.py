@@ -1,4 +1,4 @@
-#8.-Diseñar un algoritmo tal que dados como datos dos variables de tipo entero, 
+#9.-Diseñar un algoritmo tal que dados como datos dos variables de tipo entero, 
 # obtenga el resultado de la siguiente función:
 
 class variables:
