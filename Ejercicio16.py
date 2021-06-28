@@ -1,4 +1,4 @@
-# 14.-Aplicar los pasos de la metodología para la solución de un problema para leer un número entero N 
+# 16.-Aplicar los pasos de la metodología para la solución de un problema para leer un número entero N 
 # y calcular el resultado de la siguiente serie:
 # 1 – 1/2+ 1/3 – 1/4 +.... +/- 1/N. 
 

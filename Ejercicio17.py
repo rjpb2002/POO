@@ -1,4 +1,4 @@
-#15.-Calcular el factorial de N números enteros leídos de teclado.
+#17.-Calcular el factorial de N números enteros leídos de teclado.
 # El problema consistirá en realizar una estructura de N iteraciones aplicando el factorial de un número.
 
 class factorial:

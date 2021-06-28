@@ -1,5 +1,5 @@
 #1.-En ejemplos anteriores, 
-# diseñamos un pseudocódigo para encontrar la superficie de un círculo para un radio cualquiera.
+# Diseñamos un pseudocódigo para encontrar la superficie de un círculo para un radio cualquiera.
 class Circulo:
     def superficie(self):
         pi= 3.1416

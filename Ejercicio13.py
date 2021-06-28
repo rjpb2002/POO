@@ -1,4 +1,4 @@
-#11.-Diseñe un pseudocódigo para calcular la suma y producto de N números enteros, 
+#13.-Diseñe un pseudocódigo para calcular la suma y producto de N números enteros, 
 # utilizando un bucle controlado por el usuario.
 
 class calcular:
