@@ -2,7 +2,6 @@ class Calculadora:
     def __init__(self,numero1,numero2):
         self.num1=numero1
         self.num2=numero2
-    
 
     def suma(self):
         return self.num1 + self.num2
@@ -15,40 +14,41 @@ class Calculadora:
         print("{} * {} = {}".format(self.num1,self.num2,multi))
     
     def división(self):
-        pass
+        return self.num1 / self.num2
     
-class CalEstandar(Calculadora):
-    def __init__(self,numero1, numero2):
-            super().__init__(numero1,numero2)
-            
 
-    
-    def mutiplicacion():
+class CalEstandar(Calculadora):
+    def __init__(self,numero,numero1, numero2):
+            super().__init__(numero1,numero2)
+            self.numero= numero
+
+    def mutiplicacion(self):
         return self.num1 * self.num2
 
-    def exponente():
-        pass 
+    def exponente(self):
+        return self.num1 ** self.num2
 
-    def valorAbsoluto(numero):
-        # if numero < 0:
-        #     numero = numero*-1
-        # return numero
-        pass
+    def valorAbsoluto(self):
+        if self.numero < 0:
+            self.numero = self.numero*-1
+        else:
+            self.numero = self.numero
+        return self.numero
+
 
 class CalCientifica(Calculadora):
     PI = 3.1416 
-    def __init__(self, numero1, numero2):
+    def __init__(self,numero1, numero2,radio,lado):
         super().__init__(numero1,numero2)
-        pass
+        self.radio=radio
+        self.lado=lado
 
-
-# n1 = int(input("Ingrese n1: "))
-# n2 = int(input("Ingrese n2: "))
-
-
-# cal = Calculadora(4,8)
-# cal.multiplicación()
-# calEst = CalEstandar(4,8)
-# print(calEst.multiplicación())
-
+    def circunferencia(self):
+        return 2 * CalCientifica.PI * self.radio
+    
+    def areaCirculo(self):
+        return CalCientifica.PI * (self.radio*self.radio)
+    
+    def areaCuadrado(self):
+        return self.lado * self.lado
 
