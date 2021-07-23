@@ -1,6 +1,6 @@
 from Calculadora import CalCientifica, CalEstandar
 import os
-
+#RONNY
 class Menu:
     def __init__(self,titulo="",opciones= []):
         self.titulo = titulo
@@ -67,7 +67,7 @@ while opc != "5":
                     input("Presione una tecla para continuar...")
             elif opc1 == "5":
                 os.system("cls")
-                print("Potencia")
+                print("Exponente")
                 n1=int(input("Ingrese número base: "))
                 n2=int(input("Ingrese el exponente : "))
                 calEst = CalEstandar(None,n1,n2)
