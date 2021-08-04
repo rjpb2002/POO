@@ -1,5 +1,5 @@
 class Calculadora:
-    def __init__(self,numero1,numero2):
+    def __init__(self,numero1=0,numero2=0):
         self.num1=numero1
         self.num2=numero2
 
@@ -18,9 +18,8 @@ class Calculadora:
     
 
 class CalEstandar(Calculadora):
-    def __init__(self,numero,numero1, numero2):
+    def __init__(self,numero1=0, numero2=0):
             super().__init__(numero1,numero2)
-            self.numero= numero
 
     def mutiplicacion(self):
         return self.num1 * self.num2
@@ -28,27 +27,25 @@ class CalEstandar(Calculadora):
     def exponente(self):
         return self.num1 ** self.num2
 
-    def valorAbsoluto(self):
-        if self.numero < 0:
-            self.numero = self.numero*-1
+    def valorAbsoluto(self,numero):
+        if numero < 0:
+            numero = numero*-1
         else:
-            self.numero = self.numero
-        return self.numero
+            numero = numero
+        return numero
 
 
 class CalCientifica(Calculadora):
     PI = 3.1416 
-    def __init__(self,numero1, numero2,radio,lado):
+    def __init__(self,numero1=0, numero2=0):
         super().__init__(numero1,numero2)
-        self.radio=radio
-        self.lado=lado
 
-    def circunferencia(self):
-        return 2 * CalCientifica.PI * self.radio
+    def circunferencia(self,radio):
+        return 2 * CalCientifica.PI * radio
     
-    def areaCirculo(self):
-        return CalCientifica.PI * (self.radio*self.radio)
+    def areaCirculo(self,radio):
+        return CalCientifica.PI * (radio*radio)
     
-    def areaCuadrado(self):
-        return self.lado * self.lado
+    def areaCuadrado(self,lado):
+        return lado * lado
 
