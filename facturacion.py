@@ -1,3 +1,4 @@
+import abc
 from datetime import date
 class Empresa:
     def __init__(self,nom="El mejor",ruc="09156",tel="0939375202",dir="Calle Colon"):
@@ -9,11 +10,17 @@ class Empresa:
     def mostrarEmpresa(self):
         print("Empresa: {:20}  Ruc: {}".format(self.nombre,self.ruc))
 
-class Cliente:
+
+from abc import ABC, abstractmethod
+class Cliente(ABC):
     def __init__(self,nom,ced,tel):
         self.nombre = nom
         self.cedula = ced
         self.telefono = tel
+
+    @abstractmethod
+    def getCedula(self):
+        return self.cedula
 
     def mostrarCliente(self):
         print(self.nombre,self.cedula,self.telefono)
@@ -53,6 +60,8 @@ class ClientePersonal(Cliente):
     def mostrarCliente(self):
         print("Cliente: {:13}Cédula: {}".format(self.nombre,self.cedula))
 
+    def getCedula(self):
+        return super().getCedula()
 
 class Articulo:
     secuencia=0
@@ -101,21 +110,59 @@ class CabVenta:
         print("Total Venta: {:26}".format(self.total))
 
 
-empresa= Empresa()
+# cli= Cliente("Ronny","0982949404","09895684684")
+# empresa= Empresa()
 
-cli=ClientePersonal("Ronny","0982949404","09895684684",True)
+# cli=ClientePersonal("Ronny","0982949404","09895684684",True)
+# print(cli.getCedula())
+# art1= Articulo("Aceite",3,100)
+# art2= Articulo("Coca Cola",2,100)
 
-art1= Articulo("Aceite",3,100)
-art2= Articulo("Coca Cola",2,100)
+# today=date.today()
+# fecha=date(2021,8,15)
 
-today=date.today()
-fecha=date(2021,8,15)
+# venta=CabVenta("F0001",date.today(),cli)
+# venta.agregarDetalle(art1,3)
+# venta.agregarDetalle(art2,2)
+# venta.mostrarVenta(empresa.nombre,empresa.ruc)
 
-venta=CabVenta("F0001",date.today(),cli)
-venta.agregarDetalle(art1,3)
-venta.agregarDetalle(art2,2)
-venta.mostrarVenta(empresa.nombre,empresa.ruc)
+class InterfaceSistemaPago(ABC):
+    @abstractmethod
+    def pago(self):
+        pass
+
+    @abstractmethod
+    def saldo(self):
+        pass
+
+class PagoTarjetaImplements(InterfaceSistemaPago):
+    #Este proceso hace el pago del calculo de interes de la tarjeta
+    def pago(self):
+        return "Pago Tarjeta"
 
 
+    def saldo(self):
+        return "Saldo Tarjeta Rebajado"
+
+class ImplementsPagoContrato(InterfaceSistemaPago):
+    #Este proceso hace el pago del calculo de interes de la tarjeta
+    def pago(self):
+        return "Pago Contrato2"
 
 
+    def saldo(self):
+        return "Saldo Contrato Rebajado"
+
+class Vendedor():
+    def __init__(self,nombre):
+        self.nombre=nombre
+    
+    def moduloPago(self,contratoV):
+        return contratoV.pago()
+
+pagoTarjeta = PagoTarjetaImplements()
+print(pagoTarjeta.pago())
+Contrato = ImplementsPagoContrato()
+# print(Contrato.pago())
+ven1 = Vendedor("Ronny")
+print(ven1.moduloPago(Contrato))
