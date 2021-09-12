@@ -3,7 +3,7 @@ from Numeros import Basico,Intermedio
 from Listas import Lista
 from Cadenas import Cadena
 import os
-#RONNY
+
 class Menu:
     def __init__(self,titulo="",opciones= []):
         self.titulo = titulo

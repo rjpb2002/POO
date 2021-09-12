@@ -35,7 +35,7 @@ print("\n1)Suma  \n2)Resta  \n3)Multiplicación  \n4)Division  \n5)División Ent
 opcion=0
 while opcion != "8":
     opcion= input("Elija opción[1....8]: ")
-    if opcion == "1" or opcion == "2" or opcion == "3" or opcion == "4" or opcion == "5" or opcion == "6" or opcion == "7":
+    if opcion    or opcion == "2" or opcion == "3" or opcion == "4" or opcion == "5" or opcion == "6" or opcion == "7":
         n1= int(input("Ingrese número 1: "))
         n2= int(input("Ingrese número 2: "))
         dato= operaciones(n1,n2)
